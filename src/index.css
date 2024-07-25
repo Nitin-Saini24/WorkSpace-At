@@ -1,0 +1,480 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Merriweather";
+    src: url(../src/font/Merriweather-Black.woff);
+    src: url(../src/font/Merriweather-Light.woff2);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url(../src/font/Merriweather-Regular.woff);
+    src: url(../src/font/Merriweather-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url(../src/font/Merriweather-Bold.woff);
+    src: url(../src/font/Merriweather-Bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url(../src/font/Merriweather-Black.woff);
+    src: url(../src/font/Merriweather-Black.woff2);
+    font-weight: 900;
+}
+
+
+@font-face {
+    font-family: "openSans";
+    src: url(../src/font/OpenSans-Regular.woff);
+    src: url(../src/font/OpenSans-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "openSans";
+    src: url(../src/font/OpenSans-Medium.woff);
+    src: url(../src/font/OpenSans-Medium.woff2);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "openSans";
+    src: url(../src/font/OpenSans-SemiBold.woff);
+    src: url(../src/font/OpenSans-SemiBold.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "openSans";
+    src: url(../src/font/OpenSans-Bold.woff);
+    src: url(../src/font/OpenSans-Bold.woff2);
+    font-weight: 700;
+}
+
+body {
+  font-family: 'Merriweather', sans-serif;
+}
+
+.font-openSans{
+    font-family: 'openSans', sans-serif;
+}
+
+.border-red {
+    --tw-border-opacity: 1;
+    border-color: rgb(234 23 23 / var(--tw-border-opacity));
+}
+.container {
+    max-width: calc(1219px + 3.75rem);
+}
+.text-red {
+    --tw-text-opacity: 1;
+    color: rgb(234 23 23 / var(--tw-text-opacity));
+}
+
+
+
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #EA1717;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: s3 1s infinite linear;
+}
+@keyframes s3 {to{transform: rotate(1turn)}}
+
+.inner-box::before {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: #EA1717;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+
+}
+/* .chrome-scroll{ 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+} 
+ .chrome-scroll::-webkit-scrollbar { 
+    display: none;
+    width: 0px; 
+    background: transparent; 
+}  */
+
+
+
+.bg-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 23 23 / var(--tw-bg-opacity));
+}
+
+.inner-box::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+
+}
+
+.inner-box2::before {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: #EA1717;
+    position: absolute;
+    left: 30px;
+    /* top: 12px; */
+
+}
+
+.inner-box2::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    left: 45px;
+    /* top: 12px; */
+
+}
+
+.industry_news .inner-box2::before {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: #EA1717;
+    position: absolute;
+    left: 13px;
+    top: 43px;
+
+}
+
+.industry_news .inner-box2::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    left: 28px;
+    top: 43px;
+
+}
+
+@media (max-width: 1023px) {
+    .industry_news .inner-box2::before {
+        top: 14px;
+        left: 0;
+
+    }
+
+    .industry_news .inner-box2::after {
+        top: 14px;
+        left: 15px;
+
+    }
+
+}
+
+.news .news-item ul li a:hover {
+    color: #EA1717;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* @media (min-width: 1024px) and (max-width: 1130px) {
+    .iwidth {
+        width: 690px !important;
+        height: 420px;
+    }
+} */
+
+/* swipper slider  */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* footer */
+
+
+
+
+/* / footer css /  */
+
+.footer-bg {
+    background: url(../src/assets/img/footer-image.png) no-repeat 0 0 / cover;
+}
+
+/* / footer css / / Megamenu css /  */
+
+.tab {
+    float: left;
+    width: 15%;
+}
+
+.tab a {
+    display: block;
+    color: black;
+    padding: 7px 0px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tab a.active {
+    border-bottom: solid 1px rgb(202, 202, 202);
+    color: #ea1717;
+}
+
+.tabcontent {
+    float: left;
+    width: 85%;
+    padding-left: 30px;
+    display: none;
+}
+
+.manupart li:hover .mega_menu {
+    opacity: 1;
+    display: block;
+}
+
+.manupart .mega_menu {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+    z-index: 9;
+}
+
+.breaking-img::before{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+     z-index: 0;
+     border-radius: 10px;
+}
+
+
+.mega_menu .swiper-button-next,
+.mega_menu .swiper-button-prev {
+    position: relative;
+    margin-top: auto;
+    color: #000;
+}
+
+.mega_menu .swiper-button-next {
+    width: 150px;
+}
+
+.mega_menu .swiper-button-prev {
+    width: 50px;
+    margin-right: 50px;
+}
+
+ .swiper-button-disable{
+    background-color: #EA1717;
+
+}
+
+.menubar .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    border-radius: 10px;
+}
+
+.award-section .swiper-wrapper .swiper-slide {
+    background: transparent;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mega_menu .swiper-button-next:after,
+.mega_menu .swiper-button-prev:after {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.mega_menu .swiper-button-next:after {
+    padding-left: 15px;
+}
+
+#link1 {
+    display: block;
+}
+
+/* / Megamenu css /  */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+}
+
+header.blur {
+    filter: none;
+}
+
+header.blur::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: calc(100vh - 238px);
+    width: 100%;
+    backdrop-filter: blur(100px);
+    background-color: rgba(255, 255, 255, 0.14);
+    z-index: 1;
+}
+
+.top-header .hdr-srch::placeholder {
+    color: #231E1E !important;
+}
+
+
+.manupart .actv.active {
+    background: black;
+}
+
+.tabcontent-h .tabcontent1 a img {
+    transition: 0.5s;
+}
+
+.tabcontent-h .tabcontent1 {
+    overflow: hidden;
+}
+
+.tabcontent-h:hover .tabcontent1 a img {
+    transform: scale(1.1);
+
+    /* transition: 0.5s; */
+
+}
+
+.tabcontent-h .tabcontent2 a {
+    transition: 0.5s;
+}
+
+
+.tabcontent-h:hover .tabcontent2 a.trans {
+    padding-left: 10px;
+}
+
+header {
+    position: relative;
+}
+
+header.blur::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: calc(100vh - 133px);
+    width: 100%;
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.14);
+    z-index: 1;
+}
+
+.black-overlay::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+}
+
+ .top_header ul li a {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.modal_popup {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 90px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
